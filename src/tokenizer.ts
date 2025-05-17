@@ -13,7 +13,7 @@ export function tokenize(input: string): Token[] {
             } else if (!isNaN(Number(token))) {
                 return { type: 'number', value: Number(token) };
             } else {
-                return { type: 'text', value: token };
+                return { type: 'text', value: token.toLowerCase() };
             }
         });
 }
